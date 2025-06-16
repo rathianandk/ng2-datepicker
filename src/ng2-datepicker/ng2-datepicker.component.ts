@@ -152,13 +152,14 @@ export class DatePickerComponent implements ControlValueAccessor, OnInit {
 
   ngOnInit() {
     this.options = new DatePickerOptions(this.options);
+  
     this.scrollOptions = {
       barBackground: '#C9C9C9',
       barWidth: '7',
       gridBackground: '#C9C9C9',
       gridWidth: '2'
     };
-
+    console.log(this.scrollOptions)
     if (this.options.initialDate instanceof Date) {
       this.currentDate = Moment(this.options.initialDate);
       this.selectDate(null, this.currentDate);
